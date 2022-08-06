@@ -91,7 +91,7 @@
                     android:singleLine="true"
                     android:text="@{vm.title}"
                     android:textColor="@color/white"
-                    android:textSize="18sp"
+                    android:textSize="18dp"
                     app:layout_constraintBottom_toTopOf="@id/tvAlbum"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
                     android:gravity="center"
                     android:text="@{vm.album}"
                     android:textColor="@color/white"
-                    android:textSize="13sp"
+                    android:textSize="13dp"
                     app:layout_constraintBottom_toTopOf="@id/llSinger"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -134,7 +134,7 @@
                         android:ellipsize="end"
                         android:text="@{vm.singer}"
                         android:textColor="@color/white"
-                        android:textSize="14sp"
+                        android:textSize="14dp"
                         tools:text="Charlie Puth" />
 
                     <ImageView
@@ -162,7 +162,7 @@
                     android:id="@+id/llLyrics"
                     android:layout_width="300dp"
                     android:layout_height="0dp"
-                    android:layout_marginTop="25dp"
+                    android:paddingTop="20dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toTopOf="@id/ibLike"
@@ -179,7 +179,7 @@
                         android:onClick="@{() -> vm.nowLyricsClicked()}"
                         android:text="@{vm.nowLyrics}"
                         android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         tools:text="You didn't love when you had me" />
 
                     <TextView
@@ -190,16 +190,16 @@
                         android:gravity="center"
                         android:text="@{vm.nextLyrics}"
                         android:textColor="@color/gray_200"
-                        android:textSize="18sp"
+                        android:textSize="18dp"
                         tools:text="But now, you need me so badly" />
 
                 </LinearLayout>
 
                 <ToggleButton
                     android:id="@+id/ibLike"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="13dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="20dp"
                     android:background="@drawable/tb_heart"
                     android:scaleType="centerCrop"
                     android:textOff="@null"
@@ -219,6 +219,7 @@
                 android:paddingTop="15dp"
                 android:paddingBottom="30dp"
                 android:visibility="@{vm.lyricsFlag}"
+                tools:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@id/llPlayBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +242,7 @@
                         android:textColor="@color/white"
                         android:textOff="가사 검색"
                         android:textOn="가사 검색"
-                        android:textSize="16sp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -342,7 +343,7 @@
                         android:layout_weight="1"
                         android:text="@{vm.nowPlayTime}"
                         android:textColor="@color/gray_200"
-                        android:textSize="14sp"
+                        android:textSize="14dp"
                         tools:text="00:00" />
 
                     <TextView
@@ -353,7 +354,7 @@
                         android:gravity="end"
                         android:text="@{vm.playTime}"
                         android:textColor="@color/gray_200"
-                        android:textSize="14sp"
+                        android:textSize="14dp"
                         tools:text="03:40" />
 
                 </LinearLayout>
@@ -392,7 +393,7 @@
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_gravity="center"
-                    android:layout_marginEnd="30dp"
+                    android:layout_marginEnd="25dp"
                     android:background="@null"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_baseline_previous"
@@ -419,7 +420,7 @@
                     android:layout_width="43dp"
                     android:layout_height="43dp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="25dp"
                     android:background="@null"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_baseline_next"

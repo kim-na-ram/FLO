@@ -18,15 +18,15 @@
         android:onClick="@{() -> vm.oneLyricClicked(lyrics)}"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <TextView
             android:id="@+id/tvLyrics"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="28dp"
             android:gravity="center"
             android:text="@{lyrics.lyric}"
             android:textStyle="@{lyrics.highlighting}"
             android:textColor="@{lyrics.color}"
-            android:textSize="17sp"
+            android:textSize="18dp"
             tools:text="Look how all the tables" />
 
     </LinearLayout>

@@ -15,7 +15,7 @@ import com.naram.flo.R
 import com.naram.flo.data.local.model.Lyrics
 import com.naram.flo.data.remote.api.ApiRepository
 import com.naram.flo.util.Const.HIGHLIGHT
-import com.naram.flo.util.Const.WHITE
+import com.naram.flo.util.Const.NON_HIGHLIGHT
 import com.naram.flo.util.Extensions.convertTime
 import com.naram.flo.util.Extensions.timeToInt
 import com.naram.flo.util.Extensions.timeToStringMS
@@ -147,7 +147,7 @@ class MainViewModel @Inject constructor(
                                 val time = s.split("]")[0].replace("[", "")
                                 val lyric = s.split("]")[1]
 
-                                lyrics.add(Lyrics(time.timeToInt(), lyric, false, WHITE))
+                                lyrics.add(Lyrics(time.timeToInt(), lyric, false, NON_HIGHLIGHT))
                             }
                         }
 
@@ -191,7 +191,7 @@ class MainViewModel @Inject constructor(
                             // 전체 가사 보기 화면일 경우
                             lyrics.filter { it.highlighting }.forEach {
                                 it.highlighting = false
-                                it.color = WHITE
+                                it.color = NON_HIGHLIGHT
                             }
                             lyrics[key] = lyrics[nowLyricsIndex.get()].let {
                                 Lyrics(it.time, it.lyric, true, HIGHLIGHT)
@@ -288,7 +288,7 @@ class MainViewModel @Inject constructor(
 
         lyrics.filter { it.highlighting }.forEach {
             it.highlighting = false
-            it.color = WHITE
+            it.color = NON_HIGHLIGHT
         }
         // 전체 가사 보기 화면에서 현재 가사가 highlighting 될 수 있도록
         if (nowLyricsIndex.get() > -1) {

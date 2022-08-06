@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="lyrics"
+            type="com.naram.flo.data.local.model.Lyrics" />
+        <variable
+            name="vm"
+            type="com.naram.flo.ui.main.MainViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:onClick="@{() -> vm.oneLyricClicked(lyrics)}"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLyrics"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="@{lyrics.lyric}"
+            android:textStyle="@{lyrics.highlighting}"
+            android:textColor="@{lyrics.color}"
+            android:textSize="17sp"
+            tools:text="Look how all the tables" />
+
+    </LinearLayout>
+</layout>

@@ -1,16 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Flo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Flo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/gray_700</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/purple_700</item>
+        <item name="colorSecondaryVariant">@color/purple_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- 앱 실행 시, 빈 화면이 보이는 현상 방지 -->
+        <!-- preview window 를 Disable / Default 는 false -->
+        <item name="android:windowDisablePreview">true</item>
+        <!-- window 의 배경 설정 -->
+        <item name="android:windowBackground">@null</item>
+        <!-- window 를 투명으로 설정 -->
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 </resources>

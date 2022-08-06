@@ -1,7 +1,7 @@
 # FLO
 - [프로그래머스 과제관 - FLO AOS](https://school.programmers.co.kr/skill_check_assignments/3) - FLO AOS 앱의 요구사항을 바탕으로 개발했습니다.
 - email address : snrneh3@naver.com 
-- blog : https://no1ro1m.tistory.com/
+- blog : https://se0r1-tae27.tistory.com
 
 ## 🎬 Demo
 <p align="center" dir="auto">

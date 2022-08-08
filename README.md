@@ -55,6 +55,7 @@
 <details>
 <summary>해결하지 못한 이슈</summary>
 <ul dir="auto">
+<li>ViewStub 을 사용해서 구현했을 때, ViewStub 의 visibility 를 GONE 시켜도 사라지지 않는 현상</li>
 <li>전체 가사 보기 화면에서 현재 재생되고 있는 구간대의 가사가 중앙에 오도록 자동 스크롤을 할 때 화면이 깜빡거리는 현상</li>
 </ul>
 </details>

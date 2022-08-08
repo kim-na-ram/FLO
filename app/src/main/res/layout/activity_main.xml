@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/flo_slpash_image"
+            android:src="@drawable/flo_splash_image"
             tools:visibility="gone" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,7 +96,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.3"
+                    app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintVertical_chainStyle="packed"
                     tools:text="That's Hilarious" />
 
@@ -162,14 +162,12 @@
                     android:id="@+id/llLyrics"
                     android:layout_width="300dp"
                     android:layout_height="0dp"
-                    android:paddingTop="20dp"
                     android:gravity="center_vertical"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toTopOf="@id/ibLike"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/ivImage"
-                    app:layout_constraintVertical_chainStyle="spread">
+                    app:layout_constraintTop_toBottomOf="@id/ivImage">
 
                     <TextView
                         android:id="@+id/tvNowLyrics"
@@ -197,17 +195,19 @@
 
                 <ToggleButton
                     android:id="@+id/ibLike"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/tb_heart"
                     android:scaleType="centerCrop"
                     android:textOff="@null"
                     android:textOn="@null"
+                    android:layout_marginBottom="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/llLyrics" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -219,11 +219,11 @@
                 android:paddingTop="15dp"
                 android:paddingBottom="30dp"
                 android:visibility="@{vm.lyricsFlag}"
-                tools:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@id/llPlayBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/llTopMenu"
